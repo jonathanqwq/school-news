@@ -6,15 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdn.staticffile.org/popper.js/1.15.0/umd/popper.min.js"></script>
   <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
- <meta http-equiv="refresh" content="1;url=1.html" />
 </head>
 <body>
  <div class="container">
   <div class="progress w-100 ml-4 mr-4 mt-4">
-     <div class="progress-bar progress-bar-striped progress-bar-animated w-100"></div>
+     <div class="progress-bar progress-bar-striped progress-bar-animated"></div>
   </div>
+  <script>
+    location.href = "go.html";
+    var progress = 0;
+    var timer = setInterval(function(){
+      $(".progress-bar").width(++progress+"%");
+      if (progress>=100) clearInterval(timer);
+    }, 100);
+  </script>
  </div>
 </body>
 </html>
